@@ -273,7 +273,7 @@ else:
             # Display Outputs structured cleanly on UI
             out_col1, out_col2 = st.columns([1, 2])
             with out_col1:
-                st.markdown("**Compiled QR Target Card:**")azzimport streamlit as st
+                st.markdown("**Compiled QR Target Card:**")import streamlit as st
 import io
 import base64
 from PIL import Image, ImageOps, ImageFilter, ImageEnhance
