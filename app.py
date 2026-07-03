@@ -274,43 +274,6 @@ else:
             out_col1, out_col2 = st.columns([1, 2])
             with out_col1:
                 st.markdown("**Compiled QR Target Card:**")
-                import streamlit as st
-import io
-import base64
-from PIL import Image, ImageOps, ImageFilter, ImageEnhance
-import segno
-
-# =====================================================================
-# GLOBAL CONFIGURATION & STYLING
-# =====================================================================
-st.set_page_config(
-    page_title="Production Studio & QR Engine",
-    page_icon="🎨",
-    layout="wide",
-    initial_sidebar_state="expanded"
-)
-
-# Custom styling for professional UI rendering
-st.markdown("""
-    <style>
-    .reportview-container { background: #f5f7f9; }
-    .main .block-container { padding-top: 2rem; }
-    </style>
-    """, unsafe_allow_html=True)
-
-
-# =====================================================================
-# UTILITY & FILTER ENGINE FUNCTIONS
-# =====================================================================
-def apply_sepia(img):
-    """Applies a high-fidelity matrix-based sepia tone filter."""
-    img = img.convert("RGB")
-    sepia_matrix = (
-        0.393, 0.769, 0.189, 0,
-        0.349, 0.686, 0.168, 0,
-        0.272, 0.534, 0.131, 0
-    )
-
                 st.image(qr_bytes, width=320, output_format="PNG")
             
             with out_col2:
