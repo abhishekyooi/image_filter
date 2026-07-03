@@ -293,4 +293,4 @@ else:
                 
         except segno.DataOverflowError:
             st.error("🚨 Matrix Compilation Error: The input data block weight is too massive to structurally reside inside a unified QR matrix array.")
-        except Exception:
+        except :
